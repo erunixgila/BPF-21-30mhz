@@ -1,0 +1,20 @@
+Sebuah BPF untuk Band 15M, 12M, 11M, dan 10M sekaligus (part 2)
+
+- https://www.facebook.com/photo.php?fbid=10213010211473191&set=pcb.10213010325876051&type=3&theater
+- Gerber : http://s000.tinyupload.com/?file_id=22837805982512860255
+- Pcb layout (Expresspcb classic) : http://s000.tinyupload.com/?file_id=39278128613379072355
+
+BPF di layout dengan menggunakan pcb dual layer. Yang perlu menjadi perhatian adalah, disini menggunakan dual diode varactor MMBV609LT1. Jika menginginkan dengan diode varactor lainnya, anda bisa ganti sendiri dengan diode varactor lainnya.
+
+Nilai kapasitor akan bergerak dari 10-25pF dalam rentang tegangan 1V-10V, dan BPF akan beresonansi pada 20-30Mhz.
+Tuning menggunakan 2 potensiometer 100K (coarse, kasar), dan 10K (fine, lembut).
+
+IFT 10.7 HARUS dibuang capasitor di dalamnya (81pF). Jika anda merasa impedansi-nya kurang besar, ganti lilitan sekunder dengan 2-3 lilitan.
+
+Sekarang tinggal mengganti BPF yang ada (biasanya 40M) dengan pcb tambahan ini di panel depan. Jangan lupa gunakan kabel 50 ohm kecil untuk menyambung ke eksiter.
+
+LPF di PA linear harus diganti dengan LPF < 30Mhz. Nilai L nya sekitar 0.3uH dan kapasitor-nya 100pF, 150pF, 100pF.
+
+Jika anda membuat pcb di China, jangan lupa test dulu getber file-nya di https://gerber-viewer.easyeda.com/
+
+Selamat mencoba.
